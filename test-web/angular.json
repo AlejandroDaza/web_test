@@ -17,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-web",
+            "outputPath": "docs",
+            "outputHashing": "none",
+            "deployUrl": "/AlejandroDaza/web_test",
+            "baseHref": "/AlejandroDaza/web_test",
+            "extractLicenses": true,
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
