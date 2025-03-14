@@ -17,11 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
-            "outputHashing": "none",
-            "deployUrl": "/AlejandroDaza/web_test",
-            "baseHref": "/AlejandroDaza/web_test",
-            "extractLicenses": true,
+            "outputPath": "docs/",            
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -38,7 +34,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/web_test/",
+            "deployUrl": "/web_test/"
           },
           "configurations": {
             "production": {
