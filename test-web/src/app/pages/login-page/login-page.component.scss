@@ -1,0 +1,39 @@
+.login-container{
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: 100vh; 
+}
+
+.login-card{
+    width: 500px;
+    height: 400px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    display: flex;
+    flex-direction: column;  
+    place-items: center; 
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 1fr 1fr;
+    place-items: center; 
+}
+
+.full-logo{
+    padding-top: 15px;
+    width: 300px;
+}
+
+.xcat-logo{
+    padding-top: 15px;
+    width: 250px;
+}
+
+
+.login-button{
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    margin-top:40px
+}

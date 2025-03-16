@@ -1,0 +1,35 @@
+<mat-toolbar>
+    <button mat-icon-button class="toolbar-icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+      <img src="logo_xcat.png" alt="logo" height="50px" style="padding-left: 10px;" />
+  </span>  
+</mat-toolbar>
+
+<mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer class="drawer-sidenav" mode="side">
+        <mat-nav-list>
+            @for (item of this.menuItems; track item) {
+              <a mat-list-item 
+                class="menu-item"
+                [routerLink]="item.route" 
+                (click)="drawer.close()"
+                routerLinkActive = "selected-menu-item"
+                #rla="routerLinkActive"
+                [activated]="rla.isActive">
+                <mat-icon matListItemIcon [fontSet]="rla.isActive ? 'material-icons': 'material-icons-outlined'">{{item.icon}}</mat-icon>
+                <span matListItemTitle>{{item.label}}</span>
+
+              </a>
+            }
+          </mat-nav-list>
+          
+    </mat-drawer>
+  
+    <div class="sidenav-content"  (click)="drawer.close()">
+        <router-outlet></router-outlet>     
+    </div>
+  
+  </mat-drawer-container>
+  
