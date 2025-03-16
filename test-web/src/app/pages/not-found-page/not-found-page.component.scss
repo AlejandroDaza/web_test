@@ -1,0 +1,25 @@
+.container{
+    background-color: var(--primary-color);
+    margin: 0px;
+}
+
+mat-card{
+    height: 100vh;
+    margin: 0px;
+    text-align: -webkit-center;  
+    //display:inherit;
+    place-items: center; 
+    background-color: var(--primary-color);
+
+    .colorText{
+        color: var(--secondary-color);
+
+    }
+}
+
+
+
+.notfound-button{
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { environment } from './../environments/environment';
 import { MatButtonModule } from '@angular/material/button'; 
 
 @Component({
@@ -10,9 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class AppComponent {
   title = 'test-web';
+  _environment = environment;
 
-  test(){
-    alert("ok")
-
-  }
+  
 }
