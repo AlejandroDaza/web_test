@@ -1,1 +1,0 @@
-import{Qa as n,fb as o,gb as a,rb as s}from"./chunk-TQPFJOQ4.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-test-page"]],decls:2,vars:0,template:function(e,m){e&1&&(o(0,"p"),s(1,"test-page works!"),a())},encapsulation:2})};export{p as TestPageComponent};
