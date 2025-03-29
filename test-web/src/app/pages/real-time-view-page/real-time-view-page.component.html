@@ -1,1 +1,51 @@
-<p>real-time-view-page works!</p>
+<div class="custom-background">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="tabgroup-config">
+       
+
+        @for (item of this.cameraList; track item.id) {
+            <mat-tab label="{{item.camera_name}}">
+                <div  class="tab-config">
+                    <mat-card appearance="outlined" class="card-config">
+                        <mat-card-content class="mat-card-content">
+                            <img src="{{item.streaming_url}}">
+                        </mat-card-content>
+                    </mat-card>  
+    
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                        <mat-tab label="Trends">
+                            <mat-card appearance="outlined" class="card-config">
+                                <mat-card-content class="mat-card-content">
+                                    Trends
+                                    <br/>
+                                    Trends
+                                    <br>
+                                    Trends
+                                    <br/>
+                                    Trends
+                                    <br>
+                                    Trends
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-tab>
+                        <mat-tab label="Histogram">
+                            <mat-card appearance="outlined" class="card-config">
+                                <mat-card-content class="mat-card-content">
+                                    histograma
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-tab>
+                        <mat-tab label="Data Table">
+                            <mat-card appearance="outlined" class="card-config">
+                                <mat-card-content class="mat-card-content">
+                                    tabla
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </mat-tab>
+        }
+    </mat-tab-group>
+</div>
+
+

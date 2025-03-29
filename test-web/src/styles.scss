@@ -8,6 +8,19 @@
   --primary-color: #15303D;
   --secondary-color: #12BF92;
   --white-color: #ffffff;
+  
+
+  //cambios para los tabs
+  @include mat.tabs-overrides((
+    active-indicator-color: var(--primary-color),
+    active-label-text-color: var(--primary-color),
+    inactive-label-text-color: var(--secondary-color),
+    active-hover-indicator-color: var(--secondary-color),
+    active-focus-indicator-color: var(--primary-color),
+  ));
+
+
+  //---------------------
 
 }
 
@@ -23,11 +36,18 @@ html {
     density: 0,
   ));
 }/* You can add global styles to this file, and also import other style files */
-.body{
- margin: 0px;
-}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+
+.custom-background {
+  background-color: var(--white-color);
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; 
+
+}
 
 mat-toolbar{
   @include mat.elevation(3);
@@ -38,4 +58,14 @@ mat-toolbar{
 .login-card{ 
   @include mat.elevation(8);  
 }
+
+
+.mat-mdc-tab-header {
+  background-color: var(--white-color);  /* Fondo de los títulos de las pestañas */
+}
+
+.mat-mdc-tab-body {
+  background-color: var(--white-color);
+}
+
 

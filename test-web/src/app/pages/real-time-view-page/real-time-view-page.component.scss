@@ -1,0 +1,25 @@
+.tabgroup-config {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.tab-config {
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.card-config {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.mat-card-content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    //height: 100%; /* Asegura que tome el alto del card */
+   // text-align: center; /* Para centrar texto */
+   // background-color: var(--white-color);    
+  }
