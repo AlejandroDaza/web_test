@@ -1,6 +1,6 @@
 [
-    { "id": 1, "camera_name": "Camera 1", "streaming_url": "streaming_cam1.png" }, 
-    { "id": 2, "camera_name": "Camera 2", "streaming_url": "streaming_cam2.png" },
-    { "id": 3, "camera_name": "Camera 3", "streaming_url": "streaming_cam3.png" },
-    { "id": 4, "camera_name": "Camera 4", "streaming_url": "streaming_cam4.png" }
+    { "id": 1, "camera_name": "Camera 1", "streaming_url": "streaming_cam1.png", "isActive": "true" }, 
+    { "id": 2, "camera_name": "Camera 2", "streaming_url": "streaming_cam2.png", "isActive": "false" },
+    { "id": 3, "camera_name": "Camera 3", "streaming_url": "streaming_cam3.png", "isActive": "false" },
+    { "id": 4, "camera_name": "Camera 4", "streaming_url": "streaming_cam4.png", "isActive": "false" }
  ]
