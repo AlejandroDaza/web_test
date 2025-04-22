@@ -1,13 +1,13 @@
 [
-    { "id": 1, "name": "Temp1" },
-    { "id": 2, "name": "Temp2" },
-    { "id": 3, "name": "Temp3" },
-    { "id": 4, "name": "Temp4" },
-    { "id": 5, "name": "Temp5" },
-    { "id": 6, "name": "Temp6" },
-    { "id": 7, "name": "Temp7" },
-    { "id": 8, "name": "Temp8" },
-    { "id": 9, "name": "Temp9" },
-    { "id": 10, "name": "Temp10" }
+    { "id": 1, "name": "Temp1", "isActive": "true" },
+    { "id": 2, "name": "Temp2" , "isActive": "true" },
+    { "id": 3, "name": "Temp3", "isActive": "false"  },
+    { "id": 4, "name": "Temp4","isActive": "false" },
+    { "id": 5, "name": "Temp5","isActive": "false"},
+    { "id": 6, "name": "Temp6" ,"isActive": "false"},
+    { "id": 7, "name": "Temp7", "isActive": "false" },
+    { "id": 8, "name": "Temp8","isActive": "false" },
+    { "id": 9, "name": "Temp9","isActive": "false" },
+    { "id": 10, "name": "Temp10" , "isActive": "false"}
 ]
   
