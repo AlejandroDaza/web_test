@@ -1,0 +1,62 @@
+.tabgroup-config {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.tab-config {
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.card-config {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.mat-card-content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que tome el alto del card */
+   // text-align: center; /* Para centrar texto */
+   // background-color: var(--white-color);    
+}
+
+.card-grid-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center; 
+    gap: 16px;
+    grid-template-areas:
+        "section-Search section-Search"
+        "section-List section-Info";
+}
+
+
+.section-Search{ 
+    grid-area: section-Search;
+       background-color: aqua;
+    border-radius: 4px; 
+}
+
+.section-List{ 
+    grid-area: section-List;      
+    border-radius: 4px;  
+    background-color: blueviolet;
+}
+
+.section-Info{ 
+    grid-area: section-Info;         
+    border-radius: 4px; 
+    background-color: brown; 
+}
+
+.form-field-padding{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+

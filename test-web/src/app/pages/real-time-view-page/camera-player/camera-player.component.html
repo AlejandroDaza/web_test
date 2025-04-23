@@ -1,0 +1,27 @@
+<div class="monitor-container">    
+    <div >
+        @if(isPlaying){
+            <img           
+                [src]="streamUrl"
+                alt="camera stream"
+                class="stream-image"
+            />
+        }
+        @else {
+            <div  class="no-stream">
+                <img src="no_data_info/no_signal.png" alt="Sin señal" />
+                <p>Stream stopped</p>
+            </div>
+        }
+      
+      
+    </div>
+  
+    @if(showbuttons){
+        <div class="controls">
+            <button mat-raised-button color="primary" (click)="play()">▶️ Play</button>
+            <button mat-raised-button color="warn" (click)="pause()">⏹️ Pause</button>
+        </div>
+    }    
+</div>
+  

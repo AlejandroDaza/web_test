@@ -1,9 +1,13 @@
-<div class="custom-background">
-    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="tabgroup-config">
+<!-- <div class="custom-background">
+    <mat-tab-group 
+        mat-stretch-tabs="false" 
+        mat-align-tabs="center" 
+        class="tabgroup-config" 
+        (selectedTabChange)="onCameraTabChange($event)">
        
 
         @for (item of this.cameraList; track item.id) {
-            <mat-tab label="{{item.camera_name}}">
+            <mat-tab label="{{item.camera_name}}" >
                 <div  class="tab-config">
                     <mat-card appearance="outlined" class="card-config">
                         <mat-card-content class="mat-card-content">
@@ -11,20 +15,24 @@
                         </mat-card-content>
                     </mat-card>  
     
-                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" (selectedTabChange)="onGraphTabChange($event)">
                         <mat-tab label="Trends">
                             <mat-card appearance="outlined" class="card-config">
                                 <mat-card-content class="mat-card-content">
-                                    Trends
-                                    <br/>
-                                    Trends
-                                    <br>
-                                    Trends
-                                    <br/>
-                                    Trends
-                                    <br>
-                                    Trends
+                                    @if(!loadingData){
+                                        <div class="chart-container">                                         
+                                              <app-trends-graph [chartData]="chartSeriesList" [chartCategories]="chartCategoriesList" />
+                                        </div>
+                                    }
+                                    @else{
+                                        <label>Sin datos</label>
+                                    }
                                 </mat-card-content>
+                                
+
+
+
+
                             </mat-card>
                         </mat-tab>
                         <mat-tab label="Histogram">
@@ -46,6 +54,68 @@
             </mat-tab>
         }
     </mat-tab-group>
-</div>
 
 
+
+</div> -->
+
+
+<mat-tab-group (selectedTabChange)="onCameraTabChange($event.index)">
+    @for (tab of this.tabs; track $index) {
+        <mat-tab [label]="tab.name" class="tab-config">
+            <mat-card appearance="outlined" class="card-config">
+                <mat-card-content class="mat-card-content">
+                    @if(tab.isActive == "true"){                      
+                        <app-camera-player [streamUrl]="tab.streaming_url"/>                       
+                    }
+                    @else{
+                        <img class="cameraNotAvailable" src="{{cameraNotAvailableUrl}}">
+                    }
+                    
+                </mat-card-content>
+            </mat-card>  
+            <!-- Sub-tabs dentro de cada tab principal -->
+            <mat-tab-group (selectedTabChange)="onGraphTabChange($event.index)">
+                @for (subTab of tab.subTabs; track $index) {
+                    <mat-tab [label]="subTab.name">  
+                        @if(tab.isActive == "true"){
+                            <mat-card appearance="outlined" class="card-config">
+                                <mat-card-content class="mat-card-content">
+                                    <br/>
+                                    @if(subTab.name == "Trends"){
+                                        <!-- <div class="chart-wrapper">
+                                            <app-trends-graph [chartData]="subTab.data.serie" [chartCategories]="subTab.data.categories" />    
+                                            <app-data-table [tableData]="subTab.dataTable"/>
+                                        </div> -->
+                                        <div class="grid-container">
+                                            <div class="grid-item1">
+                                                <app-trends-graph [chartData]="subTab.data.serie" [chartCategories]="subTab.data.categories" />    
+                                            </div>
+                                            <div class="grid-item2">
+                                                <app-data-table [tableData]="subTab.dataTable"/>
+                                            </div>                                           
+                                        </div>
+                                    } 
+                                    @if(subTab.name == "Histogram"){
+                                        <label>Histogram</label>
+                                    }  
+                                    @if(subTab.name == "Data_Table"){
+                                        <!-- <app-data-table [tableData]="subTab.data"/> -->
+                                    }                              
+                                </mat-card-content>
+                            </mat-card>  
+                        }
+                        @else{
+                            <mat-card appearance="outlined" class="card-config">
+                                <mat-card-content class="mat-card-content">
+                                    <img class="cameraNotAvailable" src="{{dataNotAvailableUrl}}">                                  
+                                </mat-card-content>
+                            </mat-card>  
+                        }  
+                      </mat-tab>
+                }
+              
+            </mat-tab-group>
+        </mat-tab>
+    }    
+  </mat-tab-group>

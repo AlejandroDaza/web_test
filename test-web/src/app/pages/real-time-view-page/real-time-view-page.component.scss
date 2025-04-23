@@ -1,18 +1,16 @@
 .tabgroup-config {
     margin-top: 5px;
-    margin-left: 20px;
-    margin-right:20px;
+   
+
 }
 
-.tab-config {
-    margin-left: 50px;
-    margin-right: 50px;
-    
+.tab-config {   
+    height: 1200px;   
 }
 
 .card-config {
     margin-top: 10px;
-    width: 100%;
+    width: 100%;      
 }
 
 .mat-card-content {
@@ -22,4 +20,54 @@
     //height: 100%; /* Asegura que tome el alto del card */
    // text-align: center; /* Para centrar texto */
    // background-color: var(--white-color);    
-  }
+}
+
+.cameraNotAvailable{
+    width: 700px;
+}
+
+.chart-container {
+    width: 100%; 
+    height: 100%; /* Define una altura mínima */
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0 40px;
+    width: 100%;
+    grid-template-areas:
+    "area1 area2";
+}
+
+.grid-item1 {
+    grid-area: area1;
+ 
+}
+.grid-item2 {
+    grid-area: area2;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .grid-container {       
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "area1"
+        "area2";
+    }
+    
+}
+
+
+

@@ -31,6 +31,6 @@ export class LayoutComponent {
     { icon: 'running_with_errors', label: 'Real Time View', route: '/realtimeview' },
     { icon: 'analytics', label: 'Data Analytics', route: '/dataanalytics' },
     { icon: 'center_focus_weak', label: 'Detections', route: '/detections' },
-    { icon: 'dvr', label: 'Computer Vision', route: '/computervision' }
+    // { icon: 'dvr', label: 'Computer Vision', route: '/computervision' }
   ]
 }

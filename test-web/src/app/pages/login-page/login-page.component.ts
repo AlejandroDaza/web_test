@@ -21,6 +21,6 @@ export class LoginPageComponent {
 
 
   loginAnonymous(){
-    this.route.navigate(['home']);  
+    this.route.navigate(['realtimeview']);  
   }
 }

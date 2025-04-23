@@ -1,0 +1,13 @@
+[
+    { "id": 1, "name": "Temp1", "isActive": "true" },
+    { "id": 2, "name": "Temp2" , "isActive": "true" },
+    { "id": 3, "name": "Temp3", "isActive": "false"  },
+    { "id": 4, "name": "Temp4","isActive": "false" },
+    { "id": 5, "name": "Temp5","isActive": "false"},
+    { "id": 6, "name": "Temp6" ,"isActive": "false"},
+    { "id": 7, "name": "Temp7", "isActive": "false" },
+    { "id": 8, "name": "Temp8","isActive": "false" },
+    { "id": 9, "name": "Temp9","isActive": "false" },
+    { "id": 10, "name": "Temp10" , "isActive": "false"}
+]
+  
